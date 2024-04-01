@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72498C12BAAB5A40088B364 /* addevents2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C02BAAB5A40088B364 /* addevents2.swift */; };
+		B72498C32BAFBF5F0088B364 /* bubbleicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C22BAFBF5E0088B364 /* bubbleicon.swift */; };
+		B72498C52BAFC9500088B364 /* snapavatar1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C42BAFC9500088B364 /* snapavatar1.swift */; };
+		B72498C72BAFC95C0088B364 /* snapavatar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C62BAFC95C0088B364 /* snapavatar2.swift */; };
+		B72498C92BB003CD0088B364 /* addfrpopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C82BB003CC0088B364 /* addfrpopup.swift */; };
+		B74A51622BBA79AC00812C8D /* sampleeventview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74A51612BBA79AC00812C8D /* sampleeventview.swift */; };
 		B76290002BA7E92400A0FB60 /* spark2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7628FFF2BA7E92400A0FB60 /* spark2App.swift */; };
 		B76290022BA7E92400A0FB60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290012BA7E92400A0FB60 /* ContentView.swift */; };
 		B76290042BA7E92600A0FB60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76290032BA7E92600A0FB60 /* Assets.xcassets */; };
@@ -14,6 +20,20 @@
 		B76290112BA7E92600A0FB60 /* spark2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290102BA7E92600A0FB60 /* spark2Tests.swift */; };
 		B762901B2BA7E92700A0FB60 /* spark2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762901A2BA7E92700A0FB60 /* spark2UITests.swift */; };
 		B762901D2BA7E92700A0FB60 /* spark2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762901C2BA7E92700A0FB60 /* spark2UITestsLaunchTests.swift */; };
+		B762902C2BA80A2000A0FB60 /* landingpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762902B2BA80A2000A0FB60 /* landingpage.swift */; };
+		B762902E2BA80A6700A0FB60 /* mainpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762902D2BA80A6700A0FB60 /* mainpage.swift */; };
+		B76290302BA80A8A00A0FB60 /* signuppage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762902F2BA80A8A00A0FB60 /* signuppage.swift */; };
+		B76290322BA80A9500A0FB60 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290312BA80A9500A0FB60 /* login.swift */; };
+		B76290342BA80AE000A0FB60 /* locationquestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290332BA80AE000A0FB60 /* locationquestion.swift */; };
+		B76290362BA80AF600A0FB60 /* initfriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290352BA80AF600A0FB60 /* initfriends.swift */; };
+		B76290382BA80B0B00A0FB60 /* addevents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290372BA80B0B00A0FB60 /* addevents.swift */; };
+		B762903A2BA80B3600A0FB60 /* EventDateTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290392BA80B3600A0FB60 /* EventDateTimeViewModel.swift */; };
+		B762903C2BA80B4100A0FB60 /* settime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762903B2BA80B4100A0FB60 /* settime.swift */; };
+		B76290402BA80B7200A0FB60 /* addfriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762903F2BA80B7200A0FB60 /* addfriends.swift */; };
+		B76290422BA80BBE00A0FB60 /* addfriendp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290412BA80BBE00A0FB60 /* addfriendp2.swift */; };
+		B76290442BA80BD600A0FB60 /* clickevent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290432BA80BD600A0FB60 /* clickevent.swift */; };
+		B76290462BA80C4600A0FB60 /* whenlocationoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290452BA80C4600A0FB60 /* whenlocationoff.swift */; };
+		B76290482BA80C5C00A0FB60 /* friendrequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76290472BA80C5C00A0FB60 /* friendrequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B72498C02BAAB5A40088B364 /* addevents2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addevents2.swift; sourceTree = "<group>"; };
+		B72498C22BAFBF5E0088B364 /* bubbleicon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bubbleicon.swift; sourceTree = "<group>"; };
+		B72498C42BAFC9500088B364 /* snapavatar1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapavatar1.swift; sourceTree = "<group>"; };
+		B72498C62BAFC95C0088B364 /* snapavatar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapavatar2.swift; sourceTree = "<group>"; };
+		B72498C82BB003CC0088B364 /* addfrpopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addfrpopup.swift; sourceTree = "<group>"; };
+		B74A51612BBA79AC00812C8D /* sampleeventview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleeventview.swift; sourceTree = "<group>"; };
 		B7628FFC2BA7E92400A0FB60 /* spark2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spark2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7628FFF2BA7E92400A0FB60 /* spark2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spark2App.swift; sourceTree = "<group>"; };
 		B76290012BA7E92400A0FB60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +70,20 @@
 		B76290162BA7E92700A0FB60 /* spark2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spark2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B762901A2BA7E92700A0FB60 /* spark2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spark2UITests.swift; sourceTree = "<group>"; };
 		B762901C2BA7E92700A0FB60 /* spark2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spark2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B762902B2BA80A2000A0FB60 /* landingpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landingpage.swift; sourceTree = "<group>"; };
+		B762902D2BA80A6700A0FB60 /* mainpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainpage.swift; sourceTree = "<group>"; };
+		B762902F2BA80A8A00A0FB60 /* signuppage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signuppage.swift; sourceTree = "<group>"; };
+		B76290312BA80A9500A0FB60 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		B76290332BA80AE000A0FB60 /* locationquestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationquestion.swift; sourceTree = "<group>"; };
+		B76290352BA80AF600A0FB60 /* initfriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initfriends.swift; sourceTree = "<group>"; };
+		B76290372BA80B0B00A0FB60 /* addevents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addevents.swift; sourceTree = "<group>"; };
+		B76290392BA80B3600A0FB60 /* EventDateTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateTimeViewModel.swift; sourceTree = "<group>"; };
+		B762903B2BA80B4100A0FB60 /* settime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settime.swift; sourceTree = "<group>"; };
+		B762903F2BA80B7200A0FB60 /* addfriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addfriends.swift; sourceTree = "<group>"; };
+		B76290412BA80BBE00A0FB60 /* addfriendp2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addfriendp2.swift; sourceTree = "<group>"; };
+		B76290432BA80BD600A0FB60 /* clickevent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clickevent.swift; sourceTree = "<group>"; };
+		B76290452BA80C4600A0FB60 /* whenlocationoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenlocationoff.swift; sourceTree = "<group>"; };
+		B76290472BA80C5C00A0FB60 /* friendrequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendrequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +136,26 @@
 			children = (
 				B7628FFF2BA7E92400A0FB60 /* spark2App.swift */,
 				B76290012BA7E92400A0FB60 /* ContentView.swift */,
+				B762902B2BA80A2000A0FB60 /* landingpage.swift */,
+				B762902D2BA80A6700A0FB60 /* mainpage.swift */,
+				B762902F2BA80A8A00A0FB60 /* signuppage.swift */,
+				B76290312BA80A9500A0FB60 /* login.swift */,
+				B76290332BA80AE000A0FB60 /* locationquestion.swift */,
+				B76290352BA80AF600A0FB60 /* initfriends.swift */,
+				B76290372BA80B0B00A0FB60 /* addevents.swift */,
+				B72498C02BAAB5A40088B364 /* addevents2.swift */,
+				B76290392BA80B3600A0FB60 /* EventDateTimeViewModel.swift */,
+				B762903B2BA80B4100A0FB60 /* settime.swift */,
+				B72498C82BB003CC0088B364 /* addfrpopup.swift */,
+				B762903F2BA80B7200A0FB60 /* addfriends.swift */,
+				B76290412BA80BBE00A0FB60 /* addfriendp2.swift */,
+				B76290432BA80BD600A0FB60 /* clickevent.swift */,
+				B76290452BA80C4600A0FB60 /* whenlocationoff.swift */,
+				B76290472BA80C5C00A0FB60 /* friendrequest.swift */,
+				B72498C22BAFBF5E0088B364 /* bubbleicon.swift */,
+				B72498C42BAFC9500088B364 /* snapavatar1.swift */,
+				B72498C62BAFC95C0088B364 /* snapavatar2.swift */,
+				B74A51612BBA79AC00812C8D /* sampleeventview.swift */,
 				B76290032BA7E92600A0FB60 /* Assets.xcassets */,
 				B76290052BA7E92600A0FB60 /* Preview Content */,
 			);
@@ -257,8 +317,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72498C92BB003CD0088B364 /* addfrpopup.swift in Sources */,
+				B762903A2BA80B3600A0FB60 /* EventDateTimeViewModel.swift in Sources */,
+				B72498C12BAAB5A40088B364 /* addevents2.swift in Sources */,
+				B76290422BA80BBE00A0FB60 /* addfriendp2.swift in Sources */,
+				B72498C72BAFC95C0088B364 /* snapavatar2.swift in Sources */,
 				B76290022BA7E92400A0FB60 /* ContentView.swift in Sources */,
+				B76290442BA80BD600A0FB60 /* clickevent.swift in Sources */,
+				B76290322BA80A9500A0FB60 /* login.swift in Sources */,
+				B762903C2BA80B4100A0FB60 /* settime.swift in Sources */,
 				B76290002BA7E92400A0FB60 /* spark2App.swift in Sources */,
+				B76290362BA80AF600A0FB60 /* initfriends.swift in Sources */,
+				B762902C2BA80A2000A0FB60 /* landingpage.swift in Sources */,
+				B76290302BA80A8A00A0FB60 /* signuppage.swift in Sources */,
+				B762902E2BA80A6700A0FB60 /* mainpage.swift in Sources */,
+				B72498C52BAFC9500088B364 /* snapavatar1.swift in Sources */,
+				B76290342BA80AE000A0FB60 /* locationquestion.swift in Sources */,
+				B76290382BA80B0B00A0FB60 /* addevents.swift in Sources */,
+				B74A51622BBA79AC00812C8D /* sampleeventview.swift in Sources */,
+				B76290462BA80C4600A0FB60 /* whenlocationoff.swift in Sources */,
+				B76290402BA80B7200A0FB60 /* addfriends.swift in Sources */,
+				B72498C32BAFBF5F0088B364 /* bubbleicon.swift in Sources */,
+				B76290482BA80C5C00A0FB60 /* friendrequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spark2/Preview Content\"";
+				DEVELOPMENT_TEAM = HVC2LA2TCP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spark2/Preview Content\"";
+				DEVELOPMENT_TEAM = HVC2LA2TCP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
