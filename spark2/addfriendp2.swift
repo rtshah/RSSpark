@@ -6,31 +6,24 @@ struct AddFrTwo: View {
 
     var body: some View {
         ZStack {
-            Text("Send")
-                .font(.largeTitle)
-                .bold()
-                .foregroundColor(.white) // Text color changed to white for dark mode
-                .offset(x: 0, y: -330)
-                .offset(y: 25)
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(width: 280, height: 75)
-                .background(Color.white) // Adjusted for dark mode visibility
-                .cornerRadius(100)
-                .offset(x: 0, y: -250)
-                .offset(y: 25)
-            
-            Text("a friend request")
-                .font(.largeTitle)
-                .bold()
-                .foregroundColor(.white) // Text color changed to white for dark mode
-                .offset(x: 0, y: -170)
-                .offset(y: 25)
-            
-            
-            // "Done" (Accept) Button
+            VStack(spacing: 30){
+                Text("Send")
+                    .font(.system(size: 22))
+                    .bold()
+                    .foregroundColor(.white)
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(width: 250, height: 70)
+                    .background(Color.white)
+                    .cornerRadius(100)
+                
+                Text("a friend request")
+                    .font(.system(size: 22))
+                    .bold()
+                    .foregroundColor(.white)
+            }
             Button(action: {
-                print("Accept tapped") // Define the action for the "Done" (Accept) button here
+                print("Accept tapped")
             }) {
                 ZStack {
                     Rectangle()
@@ -40,7 +33,7 @@ struct AddFrTwo: View {
                     
                     Text("Send")
                         .font(.title)
-                        .foregroundColor(.black) // Text color inside the button kept black for contrast
+                        .foregroundColor(.black)
                 }
             }
             .scaleEffect(0.75)
@@ -48,7 +41,7 @@ struct AddFrTwo: View {
             
             // X out Button
             Button(action: {
-                print("X Button tapped") // Action for button tap
+                print("X Button tapped")
             }) {
                 ZStack {
                     Circle()

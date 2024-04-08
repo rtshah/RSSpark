@@ -12,24 +12,20 @@ struct FriendRequest: View {
             Map(coordinateRegion: .constant(region), interactionModes: [])
                 .edgesIgnoringSafeArea(.all)
                 .environment(\.colorScheme, .dark)
-                .disabled(true) // Disable interaction with the map
-
-            // White rectangle with the text and buttons
+                .disabled(true)
             ZStack {
-                RoundedRectangle(cornerRadius: 50) // 50 degree rounded edges
+                RoundedRectangle(cornerRadius: 50)
                     .fill(Color.white)
                     .frame(width: 350, height: 350)
                     .overlay(
-                        VStack {
+                        VStack(spacing:40){
                             Text("New Friends?")
                                 .font(.title)                                .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
-                                .padding(.top, -80)
                             Text("Name")
                                 .font(.largeTitle)
                                 .bold()
-                                .padding(.bottom, 24)
-                                .offset(y:-20)
+                                
 
                             HStack(spacing: 45) {
                                 Button("Accept") {
@@ -42,7 +38,6 @@ struct FriendRequest: View {
                                 .cornerRadius(10)
 
                                 Button("Deny") {
-                                    // Action for Deny button
                                 }
                                 .foregroundColor(.white)
                                 .scaleEffect(0.8)
@@ -52,7 +47,6 @@ struct FriendRequest: View {
                                 .cornerRadius(10)
                             }
                         }
-                        .padding(.top, 20)
                     )
             }
         }

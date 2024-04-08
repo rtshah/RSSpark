@@ -10,45 +10,41 @@ struct LandingPage: View {
     ]
 
     var body: some View {
-        ZStack {
+        ZStack () {
+            Text("⚡️")
+                .font(.system(size: 88))
+                .foregroundColor(.white)
+            Text("Spark")
+                .font(.system(size: 55, weight: .bold))
+                .foregroundColor(.white)
             ZStack {
                 Circle()
                     .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
                     .foregroundColor(.white)
                     .offset(x: isExpanded ? 0 : -24, y: isExpanded ? -135 : -159)
-                    .scaleEffect(0.65) // ui change
-
+                    .scaleEffect(0.65)
                 Circle()
                     .foregroundColor(.white)
                     .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
-                    .offset(x: isExpanded ? 0 : 24, y: isExpanded ? -135 : -159) // Adjusted Y offset
-                    .scaleEffect(0.65) // ui change
+                    .offset(x: isExpanded ? 0 : 24, y: isExpanded ? -135 : -159)
+                    .scaleEffect(0.65)
                 Circle()
                     .foregroundColor(.white)
                     .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
                     .offset(x: isExpanded ? 0 : -24, y: isExpanded ? -135 : -109)
-                    .scaleEffect(0.65) // ui change
+                    .scaleEffect(0.65)
                 Circle()
                     .foregroundColor(.white)
                     .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
                     .offset(x: isExpanded ? 0 : 24, y: isExpanded ? -135 : -109)
-                    .scaleEffect(0.65) // ui change
+                    .scaleEffect(0.65)
             }
             .frame(width: isExpanded ? 50 : 100, height: isExpanded ? 50 : 100)
             .background(Color.black)
             .offset(x: 0, y: 278)
             
-            Text("⚡️")
-                .font(.system(size: 88)) // ui change
-                .foregroundColor(.white)
-                .offset(x: 0, y: -170)
-            
-            Text("Spark")
-                .font(.system(size: 55, weight: .bold)) // ui change
-                .foregroundColor(.white)
-                .offset(x: 0, y: -45)
             Text(texts[currentTextIndex])
-                .font(.system(size: 17)) // ui change
+                .font(.system(size: 17))
                 .foregroundColor(.white)
                 .offset(x: 0, y: 275)
         }

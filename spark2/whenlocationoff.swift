@@ -12,20 +12,17 @@ struct WhenLocationOff: View {
             Map(coordinateRegion: .constant(region), interactionModes: [])
                 .edgesIgnoringSafeArea(.all)
                 .environment(\.colorScheme, .dark)
-                .disabled(true) // Disable interaction with the map
-
-            // White rectangle with the lock icon and text
+                .disabled(true)
             ZStack {
-                RoundedRectangle(cornerRadius: 50) // 50 degree rounded edges
+                RoundedRectangle(cornerRadius: 50)
                     .fill(Color.white)
                     .frame(width: 350, height: 350)
                     .overlay(
                         VStack {
                             Text("Features remain locked until location enabled")
                                 .font(.system(size: 20))
-                                .bold()
                                 .foregroundColor(.black)
-                                .multilineTextAlignment(.center) // Center-align the text
+                                .multilineTextAlignment(.center)
                                 .padding(.bottom, 20)
                                 .padding([.leading, .trailing], 20)
 
@@ -34,14 +31,14 @@ struct WhenLocationOff: View {
                                 .foregroundColor(.black)
 
                             Button(action: {
-                                // Action to enable location sharing
                             }) {
                                 Text("Enable location sharing")
-                                    .font(.title)
+                                    .font(.system(size: 20))
+                                    .bold()
                                     .foregroundColor(.black)
-                                    .padding() // Add padding around the text for the light blue box
-                                    .background(Color.blue.opacity(0.3)) // Light blue box
-                                    .cornerRadius(10) // Rounded edges for the light blue box
+                                    .padding()
+                                    .background(Color.blue.opacity(0.3))
+                                    .cornerRadius(10)
                             }
                             .padding(.top, 20)
                         }

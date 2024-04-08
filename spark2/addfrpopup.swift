@@ -13,8 +13,7 @@ struct AddFrPopUp: View {
                     .multilineTextAlignment(.center)
                 
                 Text("your friends can see what you're up to, this is for that group chat and those friends.")
-                    .font(.headline)
-                    .foregroundColor(.black)
+                    .font(.system(size: 17))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 30)
                 
@@ -25,9 +24,8 @@ struct AddFrPopUp: View {
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.black)
-                        .cornerRadius(5)
+                        .cornerRadius(15)
                 }
-                .offset(y:10)
             }
             .frame(width: 325, height: 300)
             .background(Color.white)

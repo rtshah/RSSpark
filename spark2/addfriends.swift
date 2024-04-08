@@ -1,23 +1,20 @@
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
-// Utility function to generate a QR code suitable for dark mode by inverting colors
 func generateDarkModeQRCode(from string: String) -> UIImage {
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
     filter.message = Data(string.utf8)
     
     if let qrCodeImage = filter.outputImage,
-       let invertedImage = qrCodeImage.inverted(), // Invert colors for dark mode
+       let invertedImage = qrCodeImage.inverted(),
        let cgImage = context.createCGImage(invertedImage, from: invertedImage.extent) {
         return UIImage(cgImage: cgImage)
     }
 
-    // Return a default image if QR code generation fails
     return UIImage(systemName: "xmark.circle") ?? UIImage()
 }
 
-// Extension to invert QR code colors for dark mode
 extension CIImage {
     func inverted() -> CIImage? {
         guard let filter = CIFilter(name: "CIColorInvert") else { return nil }
@@ -27,11 +24,10 @@ extension CIImage {
 }
 
 struct AddFriends: View {
-    @State private var sparkID: String = "" // State variable for Spark-ID text entry
-    var userID: String = "UserUniqueIdentifier" // Placeholder for user's unique identifier
-
+    @State private var sparkID: String = ""
+    var userID: String = "UserUniqueIdentifier"
     var qrCodeImage: UIImage {
-        let urlString = "https://example.com/user/\(userID)" // Construct the URL with the user's unique identifier
+        let urlString = "https://example.com/user/\(userID)"
         return generateDarkModeQRCode(from: urlString)
     }
 
@@ -39,25 +35,25 @@ struct AddFriends: View {
         ZStack {
             Rectangle()
                 .frame(width: 284, height: 57)
-                .foregroundColor(Color.white) // Adjust for dark mode
+                .foregroundColor(Color.white)
                 .cornerRadius(50)
                 .offset(x: 0, y: -408.50)
 
             Text("copy")
-                .font(.system(size: 18, weight: .bold)) // Default font in bold
-                .foregroundColor(.white) // Adjust for dark mode
+                .font(.system(size: 18, weight: .bold))
+                .foregroundColor(.white)
                 .underline()
                 .offset(x: 0, y: -353.50)
 
             Rectangle()
                 .frame(width: 284, height: 57)
-                .foregroundColor(Color.white) // Adjust for dark mode
+                .foregroundColor(Color.white)
                 .cornerRadius(50)
                 .offset(x: 0, y: -293.50)
 
             Text("copy")
-                .font(.system(size: 18, weight: .bold)) // Default font in bold
-                .foregroundColor(.white) // Adjust for dark mode
+                .font(.system(size: 18, weight: .bold))
+                .foregroundColor(.white)
                 .underline()
                 .offset(x: 0, y: -248.50)
 
@@ -67,7 +63,6 @@ struct AddFriends: View {
                 .scaledToFit()
                 .frame(width: 300, height: 300)
                 .cornerRadius(50)
-                .offset(x: 0, y: -62)
 
             Text("Add Friend:")
                 .font(.system(size: 20, weight: .bold)) // Default font in bold
@@ -102,30 +97,29 @@ struct AddFriends: View {
                 .rotationEffect(.degrees(45))
 
             Rectangle()
-                .foregroundColor(Color.black) // Adjust for dark mode
+                .foregroundColor(Color.black)
                 .frame(width: 90, height: 15)
                 .cornerRadius(50)
                 .offset(x: 73.64, y: 445.75)
                 .rotationEffect(.degrees(135))
 
             Button(action: {
-                // Action for the X-out button
             }) {
                 ZStack {
                     Circle()
-                        .foregroundColor(Color.red.opacity(0.44)) // Adjust for dark mode
+                        .foregroundColor(Color.red.opacity(0.44))
                         .frame(width: 30, height: 30)
                     Text("x")
-                        .font(.system(size: 24, weight: .bold)) // Default font in bold
-                        .foregroundColor(.black) // Keep black for contrast
+                        .font(.system(size: 24, weight: .bold))
+                        .foregroundColor(.black)
                         .offset(x: 0, y: -2)
                 }
             }
             .offset(x: -140, y: -495)
         }
-        .offset(y: 100) // Move everything down by 100 pixels
+        .offset(y: 100)
         .frame(width: 430, height: 932)
-        .background(.black) // Adjust for dark mode
+        .background(.black)
     }
 }
 

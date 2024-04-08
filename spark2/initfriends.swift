@@ -1,62 +1,55 @@
 import SwiftUI
 
 struct InitFriends: View {
-    @State private var isPressed = false // State to handle button press animation
+    @State private var isShared = false
     @State private var userInput: String = ""
 
     var body: some View {
         ZStack {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: 32.5) {
                 HStack {
-                    Spacer() // Pushes the Text to the center
+                    Spacer()
                     Text("Let's check on your friends")
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
-                        .multilineTextAlignment(.center) // Text itself is center-aligned
-                    Spacer() // Ensures the Text stays centered
+                        .multilineTextAlignment(.center)
+                    Spacer()
                 }
-                .padding(.top, 16) // Add some top padding to position it from the top edge
+                .padding(.top, 16)
 
                 Text("Keep in mind your friends can see what you're up to - this is for that group chat and those friends.")
                     .font(.system(size: 17))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.leading) // Left-aligned
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.leading)
 
                 Text("Your link:")
                     .font(.system(size: 17))
                     .bold()
                     .foregroundColor(.white)
 
-                    Text("spark.sampleurl.personxyzpenispe")
+                HStack {
+                    Text("spark.sampleurl.123456789")
                         .font(.system(size: 17))
                         .foregroundColor(.white)
-                        .multilineTextAlignment(.leading) // Left-aligned
-                        .padding(.trailing, 60) // Make room for the button
-
-                    // ZStack for overlaying the button on the text
+                        .multilineTextAlignment(.leading)
+                        .padding(.trailing, 60)
+                    
                     ZStack {
-                        Button(action: {
-                            self.isPressed.toggle()
-                        }) {
-                            HStack {
-                                Image(systemName: "arrow.turn.up.right")
-                                    .rotationEffect(.degrees(-45))
-                                    .font(.title3)
-                                Text("Share")
-                                    .font(.system(size: 18, weight: .bold))
+                        VStack {
+                            Button(action: {
+                                withAnimation {
+                                    self.isShared.toggle()
+                                }
+                            }) {
+                                Image(systemName: "square.and.arrow.up")
+                                    .font(.system(size: 24))
+                                    .foregroundColor(.white)
                             }
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color(#colorLiteral(red: 0.537254902, green: 0.8117647059, blue: 0.9411764706, alpha: 1)))
-                            .cornerRadius(8)
-                            .scaleEffect(isPressed ? 1.1 : 1.0)
-                            .animation(.easeInOut(duration: 0.2), value: isPressed)
                         }
-                        .scaleEffect(0.8)
-                        .offset(x: 100) // Adjust this value as needed to position the button correctly over the text
                     }
-                
+                }
+
                 Text("Your SparkID:")
                     .font(.system(size: 17))
                     .bold()
@@ -65,36 +58,36 @@ struct InitFriends: View {
                 Text("samplespa")
                     .font(.system(size: 17))
                     .foregroundColor(.white)
-                    .multilineTextAlignment(.leading) // Left-aligned
-
-                Text("You can add a SparkID:")
+                    .multilineTextAlignment(.leading)
+                    .padding(.trailing, 60)
+                
+                Text("Add a SparkID:")
                     .font(.system(size: 17))
                     .bold()
                     .foregroundColor(.white)
 
-                TextField(" ", text: $userInput)
-                    .foregroundColor(.black)
-                    .padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
-                    .background(Color(red: 0.9, green: 0.9, blue: 0.9))
-                    .cornerRadius(20)
-                    .scaleEffect(0.9)
-
-                Button(action: {
-                    // Action for when the Continue button is pressed
-                }) {
-                    Text("Continue")
-                        .font(.system(size: 20, weight: .bold))
+                HStack {
+                    TextField("Optional", text: $userInput)
                         .foregroundColor(.black)
+                        .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                        .background(.gray)
+                        .cornerRadius(20)
+                }
+
+                Button(action: {}) {
+                    Text("Continue")
+                        .font(.system(size: 17, weight: .bold))
+                        .foregroundColor(.black)
+                }
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 20)
+                        .padding(.vertical, 15)
                         .background(.white)
                         .cornerRadius(40)
-                }
-                .padding(.top, 50)
+                        .padding(.top, 25)
             }
-            .padding(.horizontal, 16) // Add additional horizontal padding to each element
+            .padding(.horizontal, 16)
         }
-        .padding(16) // Padding around the entire content
+        .padding(16)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.black)
     }

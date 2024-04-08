@@ -7,7 +7,7 @@ struct SnapAvatar2: View {
                 Color.black.edgesIgnoringSafeArea(.all)
 
                 VStack {
-                    Text("Your Bitmoji will be used to represent you in the app")
+                    Text("Your bitmoji is your in app avatar")
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)

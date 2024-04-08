@@ -15,7 +15,6 @@ struct LogIn: View {
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
-                        .offset(y: 200)
 
                     Group {
                         TextField("Email", text: $email)
@@ -24,7 +23,6 @@ struct LogIn: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(10)
                             .frame(width: 237.1875)
-                            .offset(y: 125)
 
                         SecureField("Password", text: $password)
                             .autocapitalization(.none)
@@ -32,8 +30,7 @@ struct LogIn: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(10)
                             .frame(width: 237.1875)
-                            .offset(y: 125)
-                    }.offset(y: 125)
+                    }
 
                     Button(action: {
                         if allFieldsAreValid() {
@@ -47,7 +44,6 @@ struct LogIn: View {
                             .background(Color.white)
                             .cornerRadius(45)
                     }
-                    .offset(y: 300)
                     Spacer()
 
                     Button(action: {
@@ -57,12 +53,9 @@ struct LogIn: View {
                             .font(.system(size: 17))
                             .underline()
                             .foregroundColor(.white)                    }
-                    .offset(y: -175)
                 }
-                .offset(y:-50)
-                .padding(.horizontal, 40)
-                .padding(.vertical, 20)
             }
+            .padding(.vertical, 160)
             .frame(width: 430, height: 932)
             .background(.black)
         }

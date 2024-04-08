@@ -2,20 +2,18 @@ import SwiftUI
 
 struct SetTime: View {
     @ObservedObject var viewModel: EventDateTimeViewModel
-    @State private var endDate: Date = Date().addingTimeInterval(3 * 3600) // Default to 3 hours later
-
+    @State private var endDate: Date = Date().addingTimeInterval(3 * 3600)
+    
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 20) {
-                // Central White Rectangle
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Color.white)
                     .frame(width: 350, height: 300)
                     .overlay(
                         VStack(spacing: 20) {
-                            // Start Date Picker
                             DatePicker(
                                 "Start:",
                                 selection: $viewModel.startTime,
@@ -43,7 +41,7 @@ struct SetTime: View {
                         viewModel.isShowingSetTimeView = false
                 }) {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 25)
+                        RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white)
                             .frame(width: 100, height: 50)
                         Text("Set Time")

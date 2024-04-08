@@ -12,10 +12,8 @@ struct SignUpView: View {
             ZStack {
                 VStack(spacing: 40) {
                     Text("Sign Up")
-                        .font(.largeTitle)
-                        .bold()
+                        .font(.system(size: 22, weight: .bold))
                         .foregroundColor(.white)
-                        .offset(y: 125)
 
                     Group {
                         TextField("Name", text: $name)
@@ -24,14 +22,12 @@ struct SignUpView: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(10)
                             .frame(width: 237.1875)
-                            .offset(y: 125)
                         TextField("Email", text: $email)
                             .autocapitalization(.none)
                             .padding(20)
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(10)
                             .frame(width: 237.1875)
-                            .offset(y: 125)
 
                         SecureField("Password", text: $password)
                             .autocapitalization(.none)
@@ -39,7 +35,6 @@ struct SignUpView: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(10)
                             .frame(width: 237.1875)
-                            .offset(y: 125)
 
                         SecureField("Confirm Password", text: $confirmPassword)
                             .autocapitalization(.none)
@@ -47,7 +42,6 @@ struct SignUpView: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(10)
                             .frame(width: 237.1875)
-                            .offset(y: 125)
                     }
 
                     Button(action: {
@@ -58,11 +52,10 @@ struct SignUpView: View {
                         Text("Confirm")
                             .navigationTitle("")
                             .foregroundColor(.black)
-                            .frame(width: 180, height: 60)
+                            .frame(width: 120, height: 60)
                             .background(Color.white)
-                            .cornerRadius(45)
+                            .cornerRadius(20)
                     }
-                    .offset(y: 130)
                     Spacer()
 
                     Button(action: {
@@ -71,13 +64,12 @@ struct SignUpView: View {
                         Text("Already have an account?")
                             .font(.system(size: 17))
                             .underline()
-                            .foregroundColor(.white)                    }
-                    .offset(y: -120)
+                            .foregroundColor(.white)
+                        .padding(40)                    }
                 }
-                .offset(y:-50)
-                .padding(.horizontal, 40)
-                .padding(.vertical, 20)
             }
+            .padding(.horizontal, 40)
+            .padding(.vertical, 120)
             .frame(width: 430, height: 932)
             .background(.black)
         }

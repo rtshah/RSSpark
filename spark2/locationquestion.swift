@@ -2,7 +2,7 @@ import SwiftUI
 import CoreLocation
 
 struct LocationQuestion: View {
-    @State private var yOffset: CGFloat = 600 // Initial offset for the sliding elements
+    @State private var yOffset: CGFloat = 600
     @State private var isOverlayActive: Bool = false // Controls the overlay's tap activation
     @State private var isAllowButtonPressed: Bool = false // State for the Allow button press animation
     let locationManager = CLLocationManager() // Location manager instance
