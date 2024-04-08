@@ -5,26 +5,23 @@ struct SnapAvatar1: View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             
-            // Main content VStack
-            VStack(spacing: 120) {
+            VStack(spacing: 30) {
                 Text("Sign up with your Snapchat account")
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding()
-                    .offset(y:100)
+                    .padding(.vertical, 70)
                 
                 Button(action: {
-                    // Dummy snap button action
                 }) {
                     HStack {
-                        // Ensure you have an image named "snapchatIcon" in your assets
-                        Image("snapchatIcon") // Replace with your actual image name
+                        Image("snapchatIcon")
                             .resizable()
                             .scaledToFit()
                             .frame(height: 24)
-                        Text("Log in with Snapchat")
+                        Text("Continue with Snapchat")
                             .foregroundColor(.black)
                     }
                     .padding()
@@ -32,11 +29,10 @@ struct SnapAvatar1: View {
                     .background(Color.yellow)
                     .cornerRadius(15)
                 }
-                .offset(y:100)
+                Spacer()
 
-                
-                Spacer() // This Spacer will push the button and title to the top and "I don't have Snapchat" to the bottom
             }
+            
             
             // VStack for "I don't have Snapchat" text at the bottom
             VStack {

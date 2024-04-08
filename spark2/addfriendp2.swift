@@ -1,75 +1,48 @@
 import SwiftUI
 
 struct AddFrTwo: View {
-    // Gesture state to detect swipe
+    
     @GestureState private var swipeGesture = false
-
+    
     var body: some View {
         ZStack {
-            VStack(spacing: 30){
-                Text("Send")
-                    .font(.system(size: 22))
-                    .bold()
-                    .foregroundColor(.white)
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 250, height: 70)
-                    .background(Color.white)
-                    .cornerRadius(100)
-                
-                Text("a friend request")
-                    .font(.system(size: 22))
-                    .bold()
-                    .foregroundColor(.white)
-            }
-            Button(action: {
-                print("Accept tapped")
-            }) {
-                ZStack {
-                    Rectangle()
-                        .frame(width: 250, height: 80)
-                        .cornerRadius(100)
-                        .foregroundColor(.white) // Button color changed to white for dark mode
-                    
+            VStack(spacing: 80){
+                VStack(spacing: 25){
                     Text("Send")
-                        .font(.title)
-                        .foregroundColor(.black)
-                }
-            }
-            .scaleEffect(0.75)
-            .offset(x: 0, y: 320)
-            
-            // X out Button
-            Button(action: {
-                print("X Button tapped")
-            }) {
-                ZStack {
-                    Circle()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(Color.red.opacity(0.44))
-                        .offset(y: 10)
+                        .font(.system(size: 17))
+                        .foregroundColor(.white)
+                    Text("Rahul")
+                        .font(.system(size: 22))
+                        .bold()
+                        .foregroundColor(.white)
                     
-                    Text("X")
-                        .font(.system(size: 16, weight: .bold)) // Default SwiftUI font in bold
-                        .foregroundColor(.black) // Text color inside the button kept black for contrast
-                        .offset(y: 10)
+                    Text("a friend request")
+                        .font(.system(size: 17))
+                        .foregroundColor(.white)
                 }
-            }
-            .offset(x: 130, y: -375) // Adjust position as needed
-            
-            // Detecting swipe gesture
-            .gesture(
-                DragGesture(minimumDistance: 50, coordinateSpace: .local)
-                    .updating($swipeGesture) { value, state, transaction in
-                        if value.startLocation.x < value.location.x {
-                            state = true
-                            print("Swipe detected - triggering X button action")
-                        }
+
+                    Text("Keep in mind your friends can see what you're up to - this is for that group chat and those friends.")
+                        .font(.system(size: 17))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal, 64)
+                    
+                    Button(action: {}) {
+                        Text("Continue")
+                            .font(.system(size: 17, weight: .bold))
+                            .foregroundColor(.black)
                     }
-            )
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 15)
+                    .background(.white)
+                    .cornerRadius(25)
+                    .padding(.top, 25)
+                    .padding(.horizontal, 64)
+                }
         }
         .frame(width: 430, height: 932)
-        .background(.black) // Background color set to black for dark mode
+        .background(.black)
+        .padding(.horizontal, 64)
     }
 }
 

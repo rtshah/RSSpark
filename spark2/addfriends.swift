@@ -24,6 +24,7 @@ extension CIImage {
 }
 
 struct AddFriends: View {
+    @State private var isShared = false
     @State private var sparkID: String = ""
     var userID: String = "UserUniqueIdentifier"
     var qrCodeImage: UIImage {
@@ -33,93 +34,92 @@ struct AddFriends: View {
 
     var body: some View {
         ZStack {
-            Rectangle()
-                .frame(width: 284, height: 57)
-                .foregroundColor(Color.white)
-                .cornerRadius(50)
-                .offset(x: 0, y: -408.50)
+            
+            Color.black.edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 30){
+                VStack(spacing: 5){
+                    HStack {
+                        Text("spark.sampleurl.123456789")
+                            .font(.system(size: 17))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.leading)
+                            .padding(.trailing, 60)
+                        Spacer()
+                        
+                        ZStack {
+                            VStack {
+                                Button(action: {
+                                    withAnimation {
+                                        self.isShared.toggle()
+                                    }
+                                }) {
+                                    Image(systemName: "square.and.arrow.up")
+                                        .font(.system(size: 24))
+                                        .foregroundColor(.white)
+                                }
+                            }
+                        }
+                    }
+                }.padding(.horizontal, 16)
+                VStack(spacing:5){
+                    HStack {
+                        Text("Spark-ID: 123456789")
+                            .font(.system(size: 17))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.leading)
+                            .padding(.trailing, 60)
+                        
+                        Spacer()
+                        
+                        ZStack {
+                            VStack {
+                                Button(action: {
+                                    withAnimation {
+                                        self.isShared.toggle()
+                                    }
+                                }) {
+                                    Image(systemName: "square.and.arrow.up")
+                                        .font(.system(size: 24))
+                                        .foregroundColor(.white)
+                                }
+                            }
+                        }
+                    }
+                }.padding(.horizontal, 16)
+                Image(uiImage: qrCodeImage)
+                    .resizable()
+                    .interpolation(.none)
+                    .scaledToFit()
+                    .cornerRadius(50)
+                    .padding(.horizontal, 16)
+                
+                Text("Add Friend:")
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundColor(.white)
+                
+                TextField("Spark-ID", text: $sparkID)
+                    .padding(.horizontal, 32)
+                    .frame(height: 50)
+                    .background(Color.white)
+                    .cornerRadius(50)
+                    .foregroundColor(.black)
+                    .padding(.horizontal, 32) 
 
-            Text("copy")
-                .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.white)
-                .underline()
-                .offset(x: 0, y: -353.50)
-
-            Rectangle()
-                .frame(width: 284, height: 57)
-                .foregroundColor(Color.white)
-                .cornerRadius(50)
-                .offset(x: 0, y: -293.50)
-
-            Text("copy")
-                .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.white)
-                .underline()
-                .offset(x: 0, y: -248.50)
-
-            Image(uiImage: qrCodeImage)
-                .resizable()
-                .interpolation(.none) // Prevent blurring
-                .scaledToFit()
-                .frame(width: 300, height: 300)
-                .cornerRadius(50)
-
-            Text("Add Friend:")
-                .font(.system(size: 20, weight: .bold)) // Default font in bold
-                .foregroundColor(.white) // Adjust for dark mode
-                .offset(x: 0.50, y: 119.50)
-
-            TextField("Spark-ID", text: $sparkID)
-                .padding()
-                .frame(width: 284, height: 57)
-                .background(Color.white) // Light grey for visibility in dark mode
-                .cornerRadius(50)
-                .offset(x: 0, y: 174.50)
-                .foregroundColor(.black) // Text color changed to white for dark mode
-
-            Button(action: {
-                // Action for the Submit button
-            }) {
-                Text("Submit")
-                    .font(.system(size: 20, weight: .bold)) // Default font in bold
-                    .foregroundColor(.black) // Keep black for contrast
-            }
-            .frame(width: 142, height: 45)
-            .background(Color.yellow.opacity(0.43)) // Keep or adjust for visibility in dark mode
-            .cornerRadius(50)
-            .offset(x: 0, y: 252.50)
-
-            Rectangle()
-                .foregroundColor(Color.black) // Adjust for dark mode
-                .frame(width: 90, height: 15)
-                .cornerRadius(50)
-                .offset(x: 8, y: 435.14)
-                .rotationEffect(.degrees(45))
-
-            Rectangle()
-                .foregroundColor(Color.black)
-                .frame(width: 90, height: 15)
-                .cornerRadius(50)
-                .offset(x: 73.64, y: 445.75)
-                .rotationEffect(.degrees(135))
-
-            Button(action: {
-            }) {
-                ZStack {
-                    Circle()
-                        .foregroundColor(Color.red.opacity(0.44))
-                        .frame(width: 30, height: 30)
-                    Text("x")
-                        .font(.system(size: 24, weight: .bold))
+                Button(action: {}) {
+                    Text("Continue")
+                        .font(.system(size: 17, weight: .bold))
                         .foregroundColor(.black)
-                        .offset(x: 0, y: -2)
                 }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 15)
+                        .background(.white)
+                        .cornerRadius(25)
+                        .padding(.top, 25)
+                        .padding(.horizontal, 32)
             }
-            .offset(x: -140, y: -495)
+            .padding(.horizontal, 32)
         }
-        .offset(y: 100)
-        .frame(width: 430, height: 932)
-        .background(.black)
     }
 }
 
