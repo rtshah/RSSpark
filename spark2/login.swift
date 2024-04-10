@@ -15,22 +15,22 @@ struct LogIn: View {
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
-
+                        .multilineTextAlignment(.center)
                     Group {
                         TextField("Email", text: $email)
-                            .autocapitalization(.none)
-                            .padding(20)
-                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                            .cornerRadius(10)
-                            .frame(width: 237.1875)
-
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .background(.gray)
+                            .cornerRadius(20)
                         SecureField("Password", text: $password)
                             .autocapitalization(.none)
-                            .padding(20)
-                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                            .cornerRadius(10)
-                            .frame(width: 237.1875)
+                            .foregroundColor(.black)
+                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .background(.gray)
+                            .cornerRadius(20)
                     }
+                    
+                    Spacer()
 
                     Button(action: {
                         if allFieldsAreValid() {
@@ -38,13 +38,14 @@ struct LogIn: View {
                         }
                     }) {
                         Text("Confirm")
-                            .navigationTitle("")
+                            .font(.system(size: 17, weight: .bold))
                             .foregroundColor(.black)
-                            .frame(width: 180, height: 60)
-                            .background(Color.white)
-                            .cornerRadius(45)
                     }
-                    Spacer()
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 15)
+                            .background(.white)
+                            .cornerRadius(40)
+                            .padding(.top, 25)
 
                     Button(action: {
                         print("Navigate to login screen")
@@ -56,6 +57,7 @@ struct LogIn: View {
                 }
             }
             .padding(.vertical, 160)
+            .padding(.horizontal, 48)
             .frame(width: 430, height: 932)
             .background(.black)
         }

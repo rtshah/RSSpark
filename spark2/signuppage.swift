@@ -12,51 +12,60 @@ struct SignUpView: View {
             ZStack {
                 VStack(spacing: 40) {
                     Text("Sign Up")
-                        .font(.system(size: 22, weight: .bold))
+                        .font(.largeTitle)
+                        .bold()
                         .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
 
                     Group {
-                        TextField("Name", text: $name)
-                            .autocapitalization(.none)
-                            .padding(20)
-                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                            .cornerRadius(10)
-                            .frame(width: 237.1875)
-                        TextField("Email", text: $email)
-                            .autocapitalization(.none)
-                            .padding(20)
-                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                            .cornerRadius(10)
-                            .frame(width: 237.1875)
-
+                        HStack {
+                            TextField("Name", text: $name)
+                                .foregroundColor(.black)
+                                .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                                .background(.gray)
+                                .cornerRadius(20)
+                        }
+                        HStack {
+                            TextField("Email", text: $email)
+                                .foregroundColor(.black)
+                                .autocapitalization(.none)
+                                .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                                .background(.gray)
+                                .cornerRadius(20)
+                        }
                         SecureField("Password", text: $password)
+                            .foregroundColor(.black)
                             .autocapitalization(.none)
-                            .padding(20)
-                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                            .cornerRadius(10)
-                            .frame(width: 237.1875)
-
+                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .background(.gray)
+                            .cornerRadius(20)
                         SecureField("Confirm Password", text: $confirmPassword)
+                            .foregroundColor(.black)
                             .autocapitalization(.none)
-                            .padding(20)
-                            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-                            .cornerRadius(10)
-                            .frame(width: 237.1875)
+                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .background(.gray)
+                            .cornerRadius(20)
                     }
+                    .padding(.horizontal, 16)
 
                     Button(action: {
                         if allFieldsAreValid() {
                             self.shouldNavigate = true
                         }
                     }) {
-                        Text("Confirm")
-                            .navigationTitle("")
+                        Text("Continue")
+                            .font(.system(size: 17, weight: .bold))
                             .foregroundColor(.black)
-                            .frame(width: 120, height: 60)
+                            .navigationTitle("")
                             .background(Color.white)
-                            .cornerRadius(20)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 15)
+                            .background(.white)
+                            .cornerRadius(40)
+                            .padding(.top, 25)
                     }
-                    Spacer()
+                    .padding(.horizontal, 16)
+
 
                     Button(action: {
                         print("Navigate to login screen")

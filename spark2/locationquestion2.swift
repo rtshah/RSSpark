@@ -1,7 +1,7 @@
 import SwiftUI
 import CoreLocation
 
-struct LocationQuestion: View {
+struct LocationQuestion2: View {
     @State private var yOffset: CGFloat = 600
     @State private var isOverlayActive: Bool = false
     @State private var isAllowButtonPressed: Bool = false
@@ -46,32 +46,29 @@ struct LocationQuestion: View {
             .offset(x: 0, y: 250)
             .animation(.easeInOut(duration: 0.2), value: isAllowButtonPressed)
 
-            Text("So, are you from around here?")
-                .font(.largeTitle)
-                .bold()
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .padding()
-                .offset(x: 0, y: -300)
-
-            Text("Set your location to see your friends and events nearby. Don't miss out on what's happening otherwise.")
-                .font(.system(size: 17))
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .padding()
-                .offset(x: 0, y: -128.50)
-
-            Circle()
-                .frame(width: 100, height: 100)
-                .foregroundColor(.white)
-                .offset(x: 0, y: 120)
-
-            Image("gps_4120467")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-                .offset(x: 0, y: 120)
-
+            VStack(){
+                Text("So, are you from around here?")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                Text("Set your location to see your friends and events nearby. Don't miss out on what's happening otherwise.")
+                    .font(.system(size: 17))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                Circle()
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(.white)
+                
+                Image("gps_4120467")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
+            }
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(width: 400, height: 554)
@@ -115,8 +112,8 @@ struct LocationQuestion: View {
     }
 }
 
-struct LocationQuestion_Previews: PreviewProvider {
+struct LocationQuestion2_Previews: PreviewProvider {
     static var previews: some View {
-        LocationQuestion()
+        LocationQuestion2()
     }
 }
