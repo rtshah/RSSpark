@@ -15,7 +15,7 @@ struct MainPage: View {
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     @State private var trackingMode: MapUserTrackingMode = .follow
     @State private var isSwitchOn = true
-    @State private var showEmojis = true //ui change
+    @State private var showEmojis = true
     
     
     var body: some View {
@@ -39,8 +39,7 @@ struct MainPage: View {
             
             
             if showExpandedBlackScreen {
-                //expandedBlackScreenView
-            } else if !showMenu { // Check if the SideMenu is not shown
+            } else if !showMenu {
                 RoundedRectangle(cornerRadius: 50)
                     .fill(Color.black)
                     .frame(height: UIScreen.main.bounds.height / 8)
@@ -51,7 +50,7 @@ struct MainPage: View {
                             .foregroundColor(.white)
                             .offset(y: showMenu ? UIScreen.main.bounds.height : 360)
                     )
-                    .animation(.easeOut(duration: 1), value: showMenu) // anichange
+                    .animation(.easeOut(duration: 1), value: showMenu)
                     .onTapGesture {
                         withAnimation {
                             showExpandedBlackScreen = true
@@ -71,7 +70,6 @@ struct MainPage: View {
                     } else {
                         RoundedRectangle(cornerRadius: 50).fill(Color.black).frame(height: UIScreen.main.bounds.height / 8).offset(y:400).onTapGesture{withAnimation{showExpandedBlackScreen = true}}
                     }
-                    //  mapModal
                 }.padding(.horizontal, 0)
             }.ignoresSafeArea(.all)
             
@@ -97,14 +95,11 @@ struct MainPage: View {
             RoundedRectangle(cornerRadius: 2.5)
                 .frame(width: 40, height: 5, alignment: .center)
                 .padding(.top, 7)
-            //            Image(systemName: "chevron.compact.down")
-            //                .font(.system(size: 30, weight: .medium, design: .default))
-            //                .foregroundColor(.gray)
-            //                .padding(.top, 16)
+                .foregroundColor(Color(white: 0.8))
             HStack {
                 Text("Friends")
                     .font(.system(size: 22, weight: .bold))
-                    .foregroundColor(selectedTab == 0 ? .white : .gray)
+                    .foregroundColor(selectedTab == 0 ? Color.white : Color.gray)
                     .onTapGesture {
                         withAnimation {
                             selectedTab = 0
@@ -113,7 +108,7 @@ struct MainPage: View {
                 Spacer()
                 Text("Events")
                     .font(.system(size: 22, weight: .bold))
-                    .foregroundColor(selectedTab == 1 ? .white : .gray)
+                    .foregroundColor(selectedTab == 1 ? Color.white : Color.gray)
                     .onTapGesture {
                         withAnimation {
                             selectedTab = 1
@@ -127,9 +122,10 @@ struct MainPage: View {
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
         .frame(height: 650)
-        .background(Material.thick)
+        .background(Color.black)
         .cornerRadius(30)
-        .transition(.move(edge: .bottom)).gesture(
+        .transition(.move(edge: .bottom))
+        .gesture(
             DragGesture().onEnded { value in
                 if value.translation.width < 0 {
                     withAnimation {
