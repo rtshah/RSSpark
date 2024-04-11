@@ -1,7 +1,9 @@
-import SwiftUI
+//ACTUALLY 1.0 CODE, ONLY SWITCH BACK IF PREVIEW DOESNT LOOK RIGHT ON REGULAR LOCATIONQUESTION PAGE
+/*
+ import SwiftUI
 import CoreLocation
 
-struct LocationQuestion: View {
+struct LocationQ2: View {
     @State private var yOffset: CGFloat = 600
     @State private var isOverlayActive: Bool = false
     @State private var isAllowButtonPressed: Bool = false
@@ -20,53 +22,57 @@ struct LocationQuestion: View {
                     }
             }
 
-            VStack(spacing: 85) {
-                Text("So, are you from around here?")
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-
-                Text("Set your location to see your friends and events nearby. Don't miss out on what's happening otherwise.")
-                    .font(.system(size: 17))
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
-
+            Button(action: {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    isAllowButtonPressed = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        isAllowButtonPressed = false
+                        requestLocationPermission()
+                    }
+                }
+            }) {
                 ZStack {
-                    Circle()
-                        .frame(width: 100, height: 100)
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 375, height: 58)
+                        .background(Color(red: 0, green: 0.57, blue: 0.80))
+                        .cornerRadius(100)
+                        .scaleEffect(isAllowButtonPressed ? 0.95 : 1.0)
+                    
+                    Text("Allow")
+                        .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.white)
-
-                    Image("gps_4120467") // Replace with your actual image name if different
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50, height: 50)
+                        .scaleEffect(isAllowButtonPressed ? 0.95 : 1.0)
                 }
+            }
+            .offset(x: 0, y: 250)
+            .animation(.easeInOut(duration: 0.2), value: isAllowButtonPressed)
 
-                Button(action: {
-                    withAnimation(.easeInOut(duration: 0.2)) {
-                        isAllowButtonPressed = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            isAllowButtonPressed = false
-                            requestLocationPermission()
-                        }
-                    }
-                }) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 100)
-                            .fill(Color(red: 0, green: 0.57, blue: 0.80))
-                            .frame(width: 375, height: 58)
-                            .scaleEffect(isAllowButtonPressed ? 0.95 : 1.0)
+            Text("So, are you from around here?")
+                .font(.largeTitle)
+                .bold()
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .padding()
+                .offset(x: 0, y: -300)
 
-                        Text("Allow")
-                            .font(.system(size: 20, weight: .bold))
-                            .foregroundColor(.white)
-                            .scaleEffect(isAllowButtonPressed ? 0.95 : 1.0)
-                    }
-                }
-                .animation(.easeInOut(duration: 0.2), value: isAllowButtonPressed)
-                .padding(.top, 20)
-            }.padding(.horizontal, 32)
+            Text("Set your location to see your friends and events nearby. Don't miss out on what's happening otherwise.")
+                .font(.system(size: 17))
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .padding()
+                .offset(x: 0, y: -128.50)
+
+            Circle()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.white)
+                .offset(x: 0, y: 120)
+
+            Image("gps_4120467")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 50, height: 50)
+                .offset(x: 0, y: 120)
 
             Rectangle()
                 .foregroundColor(.clear)
@@ -111,8 +117,8 @@ struct LocationQuestion: View {
     }
 }
 
-struct LocationQuestion_Previews: PreviewProvider {
+struct LocationQ2_Previews: PreviewProvider {
     static var previews: some View {
-        LocationQuestion()
+        LocationQ2()
     }
-}
+}*/

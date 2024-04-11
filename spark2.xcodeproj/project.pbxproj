@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B70F6BF92BBCE09C0048424B /* snapavatar3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F6BF82BBCE09C0048424B /* snapavatar3.swift */; };
+		B7100AC12BC7763B0057CF6D /* locationq2.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7100AC02BC7763A0057CF6D /* locationq2.0.swift */; };
 		B72498C32BAFBF5F0088B364 /* bubbleicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C22BAFBF5E0088B364 /* bubbleicon.swift */; };
 		B72498C52BAFC9500088B364 /* snapavatar1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C42BAFC9500088B364 /* snapavatar1.swift */; };
 		B72498C72BAFC95C0088B364 /* snapavatar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C62BAFC95C0088B364 /* snapavatar2.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		B70F6BF82BBCE09C0048424B /* snapavatar3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapavatar3.swift; sourceTree = "<group>"; };
+		B7100AC02BC7763A0057CF6D /* locationq2.0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationq2.0.swift; sourceTree = "<group>"; };
 		B72498C22BAFBF5E0088B364 /* bubbleicon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bubbleicon.swift; sourceTree = "<group>"; };
 		B72498C42BAFC9500088B364 /* snapavatar1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapavatar1.swift; sourceTree = "<group>"; };
 		B72498C62BAFC95C0088B364 /* snapavatar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapavatar2.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				B762902F2BA80A8A00A0FB60 /* signuppage.swift */,
 				B76290312BA80A9500A0FB60 /* login.swift */,
 				B76290332BA80AE000A0FB60 /* locationquestion.swift */,
+				B7100AC02BC7763A0057CF6D /* locationq2.0.swift */,
 				B759E0A02BC4D3A300D61B89 /* locationquestion2.swift */,
 				B76290352BA80AF600A0FB60 /* initfriends.swift */,
 				B76290372BA80B0B00A0FB60 /* addevents.swift */,
@@ -337,6 +340,7 @@
 				B70F6BF92BBCE09C0048424B /* snapavatar3.swift in Sources */,
 				B758F22A2BC65E0200C21329 /* updatedFrReq.swift in Sources */,
 				B76290362BA80AF600A0FB60 /* initfriends.swift in Sources */,
+				B7100AC12BC7763B0057CF6D /* locationq2.0.swift in Sources */,
 				B762902C2BA80A2000A0FB60 /* landingpage.swift in Sources */,
 				B76290302BA80A8A00A0FB60 /* signuppage.swift in Sources */,
 				B762902E2BA80A6700A0FB60 /* mainpage.swift in Sources */,
