@@ -21,30 +21,30 @@ struct SignUpView: View {
                         HStack {
                             TextField("Name", text: $name)
                                 .foregroundColor(.black)
-                                .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                                .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                                 .background(.gray)
-                                .cornerRadius(20)
+                                .cornerRadius(15)
                         }
                         HStack {
                             TextField("Email", text: $email)
                                 .foregroundColor(.black)
                                 .autocapitalization(.none)
-                                .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                                .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                                 .background(.gray)
-                                .cornerRadius(20)
+                                .cornerRadius(15)
                         }
                         SecureField("Password", text: $password)
                             .foregroundColor(.black)
                             .autocapitalization(.none)
-                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                             .background(.gray)
-                            .cornerRadius(20)
+                            .cornerRadius(15)
                         SecureField("Confirm Password", text: $confirmPassword)
                             .foregroundColor(.black)
                             .autocapitalization(.none)
-                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                             .background(.gray)
-                            .cornerRadius(20)
+                            .cornerRadius(15)
                     }
                     .padding(.horizontal, 16)
 

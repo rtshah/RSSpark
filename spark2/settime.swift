@@ -60,7 +60,6 @@ struct SetTime: View {
                             .padding(.horizontal, 96)
                         }
                     )
-                //continue button here
             }
         }
     }

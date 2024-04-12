@@ -11,57 +11,61 @@ struct LandingPage: View {
 
     var body: some View {
         ZStack () {
-            Text("⚡️")
-                .font(.system(size: 88))
-                .foregroundColor(.white)
-            Text("Spark")
-                .font(.system(size: 55, weight: .bold))
-                .foregroundColor(.white)
-            ZStack {
-                Circle()
-                    .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
+            VStack(spacing: 30){
+                Text("⚡️")
+                    .font(.system(size: 88))
                     .foregroundColor(.white)
-                    .offset(x: isExpanded ? 0 : -24, y: isExpanded ? -135 : -159)
-                    .scaleEffect(0.65)
-                Circle()
+
+                Text("Spark")
+                    .font(.system(size: 55, weight: .bold))
                     .foregroundColor(.white)
-                    .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
-                    .offset(x: isExpanded ? 0 : 24, y: isExpanded ? -135 : -159)
-                    .scaleEffect(0.65)
-                Circle()
+                Spacer()
+            }.padding(.top, 140)
+                ZStack {
+                    Circle()
+                        .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
+                        .foregroundColor(.white)
+                        .offset(x: isExpanded ? 0 : -24, y: isExpanded ? -135 : -159)
+                        .scaleEffect(0.65)
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
+                        .offset(x: isExpanded ? 0 : 24, y: isExpanded ? -135 : -159)
+                        .scaleEffect(0.65)
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
+                        .offset(x: isExpanded ? 0 : -24, y: isExpanded ? -135 : -109)
+                        .scaleEffect(0.65)
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
+                        .offset(x: isExpanded ? 0 : 24, y: isExpanded ? -135 : -109)
+                        .scaleEffect(0.65)
+                }
+                .frame(width: isExpanded ? 50 : 100, height: isExpanded ? 50 : 100)
+                .background(Color.black)
+                .offset(x: 0, y: 278)
+                
+                Text(texts[currentTextIndex])
+                    .font(.system(size: 17))
                     .foregroundColor(.white)
-                    .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
-                    .offset(x: isExpanded ? 0 : -24, y: isExpanded ? -135 : -109)
-                    .scaleEffect(0.65)
-                Circle()
-                    .foregroundColor(.white)
-                    .frame(width: isExpanded ? 12 : 24, height: isExpanded ? 12 : 24)
-                    .offset(x: isExpanded ? 0 : 24, y: isExpanded ? -135 : -109)
-                    .scaleEffect(0.65)
+                    .offset(x: 0, y: 275)
             }
-            .frame(width: isExpanded ? 50 : 100, height: isExpanded ? 50 : 100)
+            .frame(width: 430, height: 932)
             .background(Color.black)
-            .offset(x: 0, y: 278)
-            
-            Text(texts[currentTextIndex])
-                .font(.system(size: 17))
-                .foregroundColor(.white)
-                .offset(x: 0, y: 275)
-        }
-        .frame(width: 430, height: 932)
-        .background(Color.black)
-        .onAppear {
-            withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                isExpanded = true
-            }
-            
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
-                withAnimation {
-                    currentTextIndex = (currentTextIndex + 1) % texts.count
+            .onAppear {
+                withAnimation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                    isExpanded = true
+                }
+                
+                Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
+                    withAnimation {
+                        currentTextIndex = (currentTextIndex + 1) % texts.count
+                    }
                 }
             }
         }
-    }
 }
 
 struct LandingPage_Previews: PreviewProvider {

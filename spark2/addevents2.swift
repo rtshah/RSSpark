@@ -38,19 +38,19 @@ struct AddEvents2: View {
                 TextField("Event Name", text: $eventName)
                     .padding()
                     .background(Color.gray)
-                    .cornerRadius(10)
+                    .cornerRadius(15)
                     .foregroundColor(.white)
 
                 TextField("Theme, description, etc!", text: $eventDescription)
                     .padding(32)
                     .background(Color.gray)
-                    .cornerRadius(10)
+                    .cornerRadius(15)
                     .foregroundColor(.white)
 
                 TextField("Location", text: $location)
                     .padding()
                     .background(Color.gray)
-                    .cornerRadius(10)
+                    .cornerRadius(15)
                     .foregroundColor(.white)
 
                 HStack{

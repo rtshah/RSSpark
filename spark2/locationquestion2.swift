@@ -46,7 +46,7 @@ struct LocationQuestion2: View {
             .offset(x: 0, y: 250)
             .animation(.easeInOut(duration: 0.2), value: isAllowButtonPressed)
 
-            VStack(){
+            VStack(spacing: 35){
                 Text("So, are you from around here?")
                     .font(.largeTitle)
                     .bold()
@@ -59,15 +59,16 @@ struct LocationQuestion2: View {
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding()
-                
-                Circle()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.white)
-                
-                Image("gps_4120467")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
+                ZStack(){
+                    Circle()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.white)
+                    
+                    Image("gps_4120467")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                }
             }
             Rectangle()
                 .foregroundColor(.clear)

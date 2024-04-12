@@ -19,15 +19,15 @@ struct LogIn: View {
                     Group {
                         TextField("Email", text: $email)
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                             .background(.gray)
-                            .cornerRadius(20)
+                            .cornerRadius(15)
                         SecureField("Password", text: $password)
                             .autocapitalization(.none)
                             .foregroundColor(.black)
-                            .padding(EdgeInsets(top: 21, leading: 16, bottom: 21, trailing: 16))
+                            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                             .background(.gray)
-                            .cornerRadius(20)
+                            .cornerRadius(15)
                     }
                     
                     Spacer()
@@ -64,7 +64,6 @@ struct LogIn: View {
     }
 
     private func allFieldsAreValid() -> Bool {
-        // Check if all fields are filled and passwords match
         return !name.isEmpty && !email.isEmpty && !password.isEmpty && password == confirmPassword
     }
 }
