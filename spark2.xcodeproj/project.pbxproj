@@ -13,6 +13,7 @@
 		B72498C52BAFC9500088B364 /* snapavatar1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C42BAFC9500088B364 /* snapavatar1.swift */; };
 		B72498C72BAFC95C0088B364 /* snapavatar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C62BAFC95C0088B364 /* snapavatar2.swift */; };
 		B72498C92BB003CD0088B364 /* addfrpopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72498C82BB003CC0088B364 /* addfrpopup.swift */; };
+		B7423D2C2BC928A0003681E5 /* removefrpopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7423D2B2BC928A0003681E5 /* removefrpopup.swift */; };
 		B758F22A2BC65E0200C21329 /* updatedFrReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758F2292BC65E0100C21329 /* updatedFrReq.swift */; };
 		B759E09F2BC393D300D61B89 /* addevents2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759E09E2BC393D300D61B89 /* addevents2.swift */; };
 		B759E0A12BC4D3A500D61B89 /* locationquestion2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759E0A02BC4D3A300D61B89 /* locationquestion2.swift */; };
@@ -63,6 +64,7 @@
 		B72498C42BAFC9500088B364 /* snapavatar1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapavatar1.swift; sourceTree = "<group>"; };
 		B72498C62BAFC95C0088B364 /* snapavatar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapavatar2.swift; sourceTree = "<group>"; };
 		B72498C82BB003CC0088B364 /* addfrpopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addfrpopup.swift; sourceTree = "<group>"; };
+		B7423D2B2BC928A0003681E5 /* removefrpopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removefrpopup.swift; sourceTree = "<group>"; };
 		B758F2292BC65E0100C21329 /* updatedFrReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatedFrReq.swift; sourceTree = "<group>"; };
 		B759E09E2BC393D300D61B89 /* addevents2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addevents2.swift; sourceTree = "<group>"; };
 		B759E0A02BC4D3A300D61B89 /* locationquestion2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationquestion2.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				B72498C42BAFC9500088B364 /* snapavatar1.swift */,
 				B70F6BF82BBCE09C0048424B /* snapavatar3.swift */,
 				B72498C62BAFC95C0088B364 /* snapavatar2.swift */,
+				B7423D2B2BC928A0003681E5 /* removefrpopup.swift */,
 				B76290032BA7E92600A0FB60 /* Assets.xcassets */,
 				B76290052BA7E92600A0FB60 /* Preview Content */,
 			);
@@ -336,6 +339,7 @@
 				B759E0A12BC4D3A500D61B89 /* locationquestion2.swift in Sources */,
 				B76290322BA80A9500A0FB60 /* login.swift in Sources */,
 				B762903C2BA80B4100A0FB60 /* settime.swift in Sources */,
+				B7423D2C2BC928A0003681E5 /* removefrpopup.swift in Sources */,
 				B76290002BA7E92400A0FB60 /* spark2App.swift in Sources */,
 				B70F6BF92BBCE09C0048424B /* snapavatar3.swift in Sources */,
 				B758F22A2BC65E0200C21329 /* updatedFrReq.swift in Sources */,
